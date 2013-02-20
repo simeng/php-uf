@@ -8,31 +8,32 @@ SETUP
 
 Needs the following stuff
 
-* Smarty v3+ Templating
-    http://www.smarty.net/download
-* RedBean ORM
-    http://redbeanphp.com/downloadredbean.php
+Smarty v3+ Templating
+ * http://www.smarty.net/download
+
+RedBean ORM
+ * http://redbeanphp.com/downloadredbean.php
 
 
 FILESTRUCTURE
 -------------
 
-* Project files
-    www/index.php - apache rewrite everything to this
-    config/route.json - json url router config
-    lib/modules/* - Base dir for all modules
+Project files
+ * www/index.php - apache rewrite everything to this
+ * config/route.json - json url router config
+ * lib/modules/* - Base dir for all modules
 
-* Framework files
-    lib/uf/* - The framework
-    lib/uf/mod_base.php - The basemodule that all modules loaded with "load" should extend.
+Framework files
+ * lib/uf/* - The framework
+ * lib/uf/mod_base.php - The basemodule that all modules loaded with "load" should extend.
 
-* Templating files
-    lib/smarty/ - Put contents of libs/-dir from downloaded smarty files here
-    templates/* - Template source files
-    templates_c/* - Output dir for smarty (must be writable by webserver)
+Templating files
+ * lib/smarty/ - Put contents of libs/-dir from downloaded smarty files here
+ * templates/* - Template source files
+ * templates_c/* - Output dir for smarty (must be writable by webserver)
 
-* Redbean ORM
-    lib/redbean/ - Put redbean files here
+Redbean ORM
+ * lib/redbean/ - Put redbean files here
 
 
 config/route.json
