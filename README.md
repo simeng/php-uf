@@ -45,6 +45,7 @@ the module output named as template variable as specified in
 "id" (if specified) or "name"
 
 Example:
+
     {
         "setup": {
             "orm": {
