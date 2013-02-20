@@ -1,0 +1,60 @@
+{
+    "global": {
+        "load": [
+        ]
+    },
+    "setup": {
+        "orm": {
+            "username": "test",
+            "password": "testpassword",
+            "dsn": "mysql:host=localhost;dbname=test",
+            "__comment": "devel/production to freeze db layout",
+            "mode": "devel" 
+        }
+    },
+    "urls": {
+        "^/product/(?P<product_id>[^/]+)/?$": {
+            "load": [
+                {
+                    "name": "mod_product",
+                    "options": {
+                    }
+                }
+            ],
+            "template": {
+                "name": "product.tpl"
+            }
+        },
+        "^/category/(?P<category>[^/]+)?/?(?P<page>\\d+)?/?$": { 
+            "template": {
+                "name": "category/index.tpl",
+                "set": {
+                    "categories": [
+                        {"name": "Stuff", "desc": ""},
+                        {"name": "Other stuff", "desc": ""},
+                        {"name": "More stuff", "desc": "This is more stuff"}
+                    ]
+                }
+            },
+            "load": [
+                {
+                    "name": "mod_category",
+                    "options": {
+                    }
+                }
+            ]
+        },
+        "^/about/?$": {
+            "template": {
+                "name": "about.tpl"
+            }
+        },
+        "^/$": { 
+            "load": [ 
+            ],
+            "template": { 
+                "name": "mainpage.tpl"
+            }
+        }
+    }
+}
